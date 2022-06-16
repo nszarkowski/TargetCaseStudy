@@ -2,6 +2,8 @@
 Case Study for Target Software Engineer Position - System Programming
 Created by - Nicholas Boder-Szarkowski
 
+Most Current Version to Run - Version 3
+
 Before Running:
 Start with installing Python.
 Current Version is here https://www.python.org/downloads/
