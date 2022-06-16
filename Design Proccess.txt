@@ -1,0 +1,87 @@
+Design Information:
+
+Initial Design Informaiton:
+	Mount Point Bytes used
+	To DO:
+	XGet File Path
+	XGet Sub Directories
+	-take sub directory list and store it
+	-Get Sub directories into dictionary by creating a tuple of original path and sub directory index in list
+	-create open variable that joins the dictionary at every index to test
+	-Look up directories bassed on dictionary
+	-create json file for storing
+	-pull data from each sub directory on their byte size
+	-put the combined dictionary variable and data size into json
+	-Display the Json data
+
+	Need error correction if file is not a mount point, not accessable, not a path in general etc...
+	Might need to walk through each file in path and calculate teh combined size of all files in path at given
+	directory
+
+	Set up
+	- imports
+	*Json to display end data in a json file
+	*os to manipulate file information
+	*shutil to get file data
+
+	*Files variable will be a dict
+
+	First step
+	- Check if given point is a mount point
+	- using os.path.ismount() method
+	- Path should be input()
+		* Make path an independent variable instead of just common input in the even you need multiple paths later for sub path
+	- 
+
+
+	Steps
+	1. import needed 
+	Mount Point Bytes used
+
+Second Version Design:
+	To DO:
+	XGet File Path
+	XGet Sub Directories
+	Xtake sub directory list and store it
+	XGet Sub directories into dictionary by creating a tuple of original path and sub directory index in list
+	Xcreate open variable that joins the dictionary at every index to test
+	XLook up directories bassed on dictionary
+	Xcreate json file for storing
+	Xpull data from each sub directory on their byte size
+	Xput the combined dictionary variable and data size into json
+	XDisplay the Json data
+
+
+	Need error correction if file is not a mount point, not accessable, not a path in general etc...
+	
+
+	Set up:
+	- imports
+	*Json to display end data in a json file
+	*os to manipulate file information
+	*Pathlib to manipulate file path to correct operating system slash work
+
+	*Files variable will be a dict
+
+	Steps:
+	- Check if given point is a mount point
+	- using os.path.ismount() method
+	- Path should be input()
+	- Make second pathData varialbe to store path as a Pathlib data type
+	* Make path an independent variable instead of just common input in the even you need multiple paths later for sub path
+	- Create a Result dictionary to store the mount path and coresponding file names as a paired set
+	- Create a Sub Directory list to show each item one directory level down
+	- Using a while loop to go through the sub directories and get the file size
+	- Using nested for loop to make sure the sub directory is a file and not a folder
+	- Serialize Json and add dictionary that uses plain data and not operating system version from Pathlib to display later
+	- Add Dictionary and byte data informaiotn to Json and call back the Json to display	
+	
+ 
+	Updates
+	V2:	
+	-Added Pathlib to make file system correct based on operating system since a window os uses \ and unix uses/
+	its important to allow both os's to run the script for any enviornment
+	-Added Json Format to display data as asked
+
+Third Version Design:
+	Added ability to loop back through code with recursion and make sure that if you wanted to check other mount points you can.
