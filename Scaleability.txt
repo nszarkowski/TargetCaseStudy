@@ -1,0 +1,12 @@
+To Scale this project what other functions need to be added:
+1. Ability to get folders as well as files to know how much data the folder stores since currently only files come up
+    a. possiblity is to create an os.walk function where you get the files within folders byte data and add them all together to create folder byte instead of 0
+       since folder has no data but, a file in the folder does. 
+    b. The challenge will be resource management since going through a folder for byte data means going 
+       into every sub-folder to get said byte data
+    c. other challenge will be storing every new byte data for math and making sure you don't count the same data twice going up and down the directory
+2. Allow for recursion in order to re-start program if you enter an incorrect mount point.
+*added to version 3
+3. Go through all possible mount points user can acess and create an option for them to pick from instead of trying to remember every mount point
+    a. difficulty would be having permisions to access all mount points
+    b. would need to create a dropdown like system where user selects from a pre-determined set of answers
